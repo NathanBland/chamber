@@ -9,7 +9,7 @@ const compression = require('compression')
 const RateLimit = require('express-rate-limit') // not used here, need to move, probably to search and login
 const routes = require('./routes/')
 const helmet = require('helmet')
-const host = process.env.HOST || '127.0.0.1'
+const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3000
 
 app.set('port', port)

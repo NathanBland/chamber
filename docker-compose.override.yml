@@ -1,0 +1,7 @@
+version: "3.2"
+# services:
+#   app:
+#     volumes:
+#       - type: bind
+#         source: .
+#         target: /home/app/

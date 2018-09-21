@@ -1,7 +1,8 @@
-version: "3"
+version: "3.2"
 services:
   app:
     build: .
+    image: chamber:1
     depends_on:
       - postgres
     ports:
