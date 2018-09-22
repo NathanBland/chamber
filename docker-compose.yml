@@ -10,5 +10,8 @@ services:
       - "9229:9229"
   postgres:
     image: postgres:10-alpine
+    ports: 
+      - "5432:5432"
     environment:
+      POSTGRES_DB: chamber
       POSTGRES_PASSWORD: postgres
