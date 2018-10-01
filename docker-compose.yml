@@ -3,9 +3,9 @@ version: '3'
 services:
   vinyl-api:
     tty: true # Enables debugging capabilities when attached to this container.
-    # build: .
+    build: .
     image: 'node:8.10.0-alpine'
-    command: "sh -c 'npm i && npm i -g sequelize-cli && sequelize db:migrate && npm run dev'"
+    command: "sh -c 'youtube-dl -U && npm i && npm i -g sequelize-cli && sequelize db:migrate && npm run dev'"
     # user: "node"
     working_dir: /home/node/app
     environment:

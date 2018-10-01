@@ -23,6 +23,7 @@
     "express-rate-limit": "^3.2.0",
     "helmet": "^3.13.0",
     "jwt-simple": "^0.5.1",
+    "last-fm": "^5.2.1",
     "morgan": "^1.9.1",
     "nuxt": "^1.0.0",
     "passport": "^0.4.0",
@@ -30,7 +31,8 @@
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.38.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "youtube-dl-info": "0.0.6"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
