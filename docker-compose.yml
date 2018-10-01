@@ -1,17 +1,29 @@
-version: "3.2"
+version: '3'
+
 services:
-  app:
-    build: .
-    image: chamber:1
+  vinyl-api:
+    tty: true # Enables debugging capabilities when attached to this container.
+    # build: .
+    image: 'node:8.10.0-alpine'
+    command: "sh -c 'npm i && npm i -g sequelize-cli && sequelize db:migrate && npm run dev'"
+    # user: "node"
+    working_dir: /home/node/app
+    environment:
+      NODE_ENV: development
+      SKIP_DB_WAIT: 0
+      SKIP_DB_MIGRATION: 0
+      SKIP_NPM_INSTALL: 0
+      SKIP_BOWER_INSTALL: 0
     depends_on:
       - postgres
     ports:
-      - "3000:3000"
-      - "9229:9229"
+      - 3000:3000
+    volumes:
+      - ./:/home/node/app
   postgres:
     image: postgres:10-alpine
     ports: 
-      - "5432:5432"
+      - 5432:5432
     environment:
-      POSTGRES_DB: chamber
+      POSTGRES_DB: vinyl-api
       POSTGRES_PASSWORD: postgres
