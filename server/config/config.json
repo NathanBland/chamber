@@ -2,8 +2,8 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "chamber",
-    "host": "192.168.99.100",
+    "database": "vinyl-api",
+    "host": "postgres",
     "port": "5432",
     "dialect": "postgres"
   },
